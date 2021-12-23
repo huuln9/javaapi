@@ -4,5 +4,5 @@ final Map<String, String> settingViVN = {
   'Enable notifications': 'Nhận thông báo',
   'Comment': 'Góp ý ứng dụng',
   'Version': 'Phiên bản ứng dụng',
-  'Profile': 'Các clip hướng dẫn',
+  'Instructional clips': 'Các clip hướng dẫn',
 };

@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Setting extends StatelessWidget {
+class Setting extends StatefulWidget {
   const Setting({Key? key}) : super(key: key);
+
+  @override
+  State<Setting> createState() => _SettingState();
+}
+
+class _SettingState extends State<Setting> {
+  bool english = false;
 
   @override
   Widget build(BuildContext context) {
@@ -43,12 +50,27 @@ class Setting extends StatelessWidget {
               trailing: Padding(
                 padding: const EdgeInsets.only(right: 8.0, bottom: 8.0),
                 child: IconButton(
-                  icon: const Icon(
-                    Icons.toggle_off,
-                    size: 50,
-                    color: Colors.purple,
-                  ),
-                  onPressed: () => {},
+                  icon: english
+                      ? const Icon(
+                          Icons.toggle_on,
+                          size: 50,
+                          color: Colors.green,
+                        )
+                      : const Icon(
+                          Icons.toggle_off,
+                          size: 50,
+                          color: Colors.black54,
+                        ),
+                  onPressed: () {
+                    setState(() {
+                      english = !english;
+                    });
+                    if (english) {
+                      Get.updateLocale(const Locale('en', 'US'));
+                    } else {
+                      Get.updateLocale(const Locale('vi', 'VN'));
+                    }
+                  },
                 ),
               ),
             ),
@@ -68,7 +90,7 @@ class Setting extends StatelessWidget {
                   icon: const Icon(
                     Icons.toggle_off,
                     size: 50,
-                    color: Colors.purple,
+                    color: Colors.black54,
                   ),
                   onPressed: () => {},
                 ),
