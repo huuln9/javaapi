@@ -109,9 +109,12 @@ class _SettingState extends State<Setting> {
                   "Version".tr,
                   style: const TextStyle(fontSize: 18),
                 ),
-                trailing: const Text(
-                  "1.0.0",
-                  style: TextStyle(fontSize: 18, color: Colors.blue),
+                trailing: const Padding(
+                  padding: EdgeInsets.only(right: 16.0, bottom: 8.0),
+                  child: Text(
+                    "1.0.0",
+                    style: TextStyle(fontSize: 18, color: Colors.blue),
+                  ),
                 ),
               ),
               const Padding(
