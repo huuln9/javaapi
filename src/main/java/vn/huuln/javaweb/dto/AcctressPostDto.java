@@ -3,6 +3,7 @@ package vn.huuln.javaweb.dto;
 import lombok.Data;
 
 @Data
-public class TagPostDto {
+public class AcctressPostDto {
     private String name;
+    private String avatar;
 }
