@@ -1,13 +1,15 @@
 package vn.huuln.javaweb.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import vn.huuln.javaweb.dto.TagPostDto;
+import vn.huuln.javaweb.service.AcctressService;
 
 @RestController
 @RequestMapping("/acctress")
 public class AcctressController {
+    @Autowired
+    AcctressService service;
 
     @GetMapping
     private String getList() {
@@ -15,7 +17,7 @@ public class AcctressController {
     }
 
     @PostMapping
-    private String add() {
-        return "post";
+    private void add(@RequestBody TagPostDto data) {
+        service.add(data);
     }
 }
