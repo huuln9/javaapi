@@ -3,6 +3,6 @@ package vn.huuln.javaweb.dto;
 import lombok.Data;
 
 @Data
-public class TagPostDto {
+public class TagPostPutDto {
     private String name;
 }
