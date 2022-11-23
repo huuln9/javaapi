@@ -10,7 +10,7 @@ import vn.huuln.javaweb.repository.TagRepository;
 public class TagService {
 
     @Autowired
-    TagRepository repo;
+    private TagRepository repo;
 
     public void add(TagPostDto dto) {
         Tag tag = new Tag();

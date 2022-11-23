@@ -1,8 +1,6 @@
 package vn.huuln.javaweb.dto;
 
 import lombok.Data;
-import vn.huuln.javaweb.document.Acctress;
-import vn.huuln.javaweb.document.Tag;
 
 import java.util.List;
 
@@ -10,6 +8,6 @@ import java.util.List;
 public class MvPostDto {
     private String code;
     private List<String> links;
-    private List<Acctress> acctresses;
-    private List<Tag> tags;
+    private List<IdNameDto> acctresses;
+    private List<IdNameDto> tags;
 }
