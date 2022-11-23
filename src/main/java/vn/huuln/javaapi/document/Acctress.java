@@ -1,4 +1,4 @@
-package vn.huuln.javaweb.document;
+package vn.huuln.javaapi.document;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

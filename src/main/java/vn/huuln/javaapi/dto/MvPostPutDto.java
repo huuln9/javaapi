@@ -1,4 +1,4 @@
-package vn.huuln.javaweb.dto;
+package vn.huuln.javaapi.dto;
 
 import lombok.Data;
 

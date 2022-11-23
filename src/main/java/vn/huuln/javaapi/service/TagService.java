@@ -1,4 +1,4 @@
-package vn.huuln.javaweb.service;
+package vn.huuln.javaapi.service;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,10 +9,10 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.repository.support.PageableExecutionUtils;
 import org.springframework.stereotype.Service;
-import vn.huuln.javaweb.document.Tag;
-import vn.huuln.javaweb.dto.TagGetDto;
-import vn.huuln.javaweb.dto.TagPostPutDto;
-import vn.huuln.javaweb.repository.TagRepository;
+import vn.huuln.javaapi.document.Tag;
+import vn.huuln.javaapi.dto.TagGetDto;
+import vn.huuln.javaapi.dto.TagPostPutDto;
+import vn.huuln.javaapi.repository.TagRepository;
 
 import java.util.List;
 import java.util.Objects;

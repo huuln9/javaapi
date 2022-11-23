@@ -1,10 +1,10 @@
-package vn.huuln.javaweb;
+package vn.huuln.javaapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JavawebApplicationTests {
+class JavaapiApplicationTests {
 
 	@Test
 	void contextLoads() {

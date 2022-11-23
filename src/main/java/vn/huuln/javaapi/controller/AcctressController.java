@@ -1,33 +1,32 @@
-package vn.huuln.javaweb.controller;
+package vn.huuln.javaapi.controller;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
-import vn.huuln.javaweb.dto.TagGetDto;
-import vn.huuln.javaweb.dto.TagPostPutDto;
-import vn.huuln.javaweb.service.TagService;
+import vn.huuln.javaapi.dto.AcctressGetDto;
+import vn.huuln.javaapi.dto.AcctressPostPutDto;
+import vn.huuln.javaapi.service.AcctressService;
 
 @RestController
-@RequestMapping("/tag")
-public class TagController {
+@RequestMapping("/acctress")
+public class AcctressController {
     @Autowired
-    TagService service;
+    AcctressService service;
 
     @GetMapping
-    private Page<TagGetDto> getList(@RequestParam(name = "name", required = false) String name, Pageable pageable) {
+    private Page<AcctressGetDto> getList(@RequestParam(name = "name", required = false) String name, Pageable pageable) {
         return service.getList(name, pageable);
     }
 
     @PostMapping
-    private void add(@RequestBody TagPostPutDto data) {
+    private void add(@RequestBody AcctressPostPutDto data) {
         service.add(data);
     }
 
-
     @PutMapping("/{id}")
-    private void update(@PathVariable(value = "id", required = true) ObjectId id, @RequestBody TagPostPutDto data) {
+    private void update(@PathVariable(value = "id", required = true) ObjectId id, @RequestBody AcctressPostPutDto data) {
         service.update(id, data);
     }
 

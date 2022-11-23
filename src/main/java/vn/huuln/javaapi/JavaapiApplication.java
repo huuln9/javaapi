@@ -1,13 +1,13 @@
-package vn.huuln.javaweb;
+package vn.huuln.javaapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JavawebApplication {
+public class JavaapiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JavawebApplication.class, args);
+		SpringApplication.run(JavaapiApplication.class, args);
 	}
 
 }

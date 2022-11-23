@@ -1,14 +1,14 @@
-package vn.huuln.javaweb.controller;
+package vn.huuln.javaapi.controller;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
-import vn.huuln.javaweb.dto.MvGetDto;
-import vn.huuln.javaweb.dto.MvPostPutDto;
-import vn.huuln.javaweb.dto.TagPostPutDto;
-import vn.huuln.javaweb.service.MvService;
+import vn.huuln.javaapi.dto.MvGetDto;
+import vn.huuln.javaapi.dto.MvPostPutDto;
+import vn.huuln.javaapi.dto.TagPostPutDto;
+import vn.huuln.javaapi.service.MvService;
 
 @RestController
 @RequestMapping("/mv")
