@@ -20,6 +20,6 @@ public class Mv {
     private String thumbnail;
     private List<String> images;
     private List<String> links;
-    private List<Acctress> acctresses;
+    private List<Actress> acctresses;
     private List<Tag> tags;
 }

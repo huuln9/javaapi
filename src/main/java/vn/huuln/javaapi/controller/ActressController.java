@@ -5,18 +5,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
-import vn.huuln.javaapi.dto.AcctressGetDto;
+import vn.huuln.javaapi.dto.ActressGetDto;
 import vn.huuln.javaapi.dto.AcctressPostPutDto;
-import vn.huuln.javaapi.service.AcctressService;
+import vn.huuln.javaapi.service.ActressService;
 
 @RestController
-@RequestMapping("/acctress")
-public class AcctressController {
+@RequestMapping("/actress")
+public class ActressController {
     @Autowired
-    AcctressService service;
+    ActressService service;
 
     @GetMapping
-    private Page<AcctressGetDto> getList(@RequestParam(name = "name", required = false) String name, Pageable pageable) {
+    private Page<ActressGetDto> getList(@RequestParam(name = "name", required = false) String name, Pageable pageable) {
         return service.getList(name, pageable);
     }
 

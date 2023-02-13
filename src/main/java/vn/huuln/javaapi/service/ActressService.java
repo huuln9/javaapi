@@ -9,44 +9,44 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.repository.support.PageableExecutionUtils;
 import org.springframework.stereotype.Service;
-import vn.huuln.javaapi.document.Acctress;
-import vn.huuln.javaapi.dto.AcctressGetDto;
+import vn.huuln.javaapi.document.Actress;
+import vn.huuln.javaapi.dto.ActressGetDto;
 import vn.huuln.javaapi.dto.AcctressPostPutDto;
-import vn.huuln.javaapi.repository.AcctressRepository;
+import vn.huuln.javaapi.repository.ActressRepository;
 
 import java.util.List;
 import java.util.Objects;
 
 @Service
-public class AcctressService {
+public class ActressService {
     @Autowired
-    private AcctressRepository repo;
+    private ActressRepository repo;
 
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public Page<AcctressGetDto> getList(String name, Pageable pageable) {
+    public Page<ActressGetDto> getList(String name, Pageable pageable) {
         Query query = new Query();
         Criteria criteria = new Criteria();
         if (Objects.nonNull(name)) {
             query.addCriteria(criteria.orOperator(Criteria.where("name").regex(name.trim(), "i")));
         }
         query.with(pageable);
-        List<AcctressGetDto> acctressGetDtos = mongoTemplate.find(query, AcctressGetDto.class);
-        Page<AcctressGetDto> page = PageableExecutionUtils.getPage(acctressGetDtos, pageable,
-                () -> mongoTemplate.count(Query.of(query).limit(-1).skip(-1), AcctressGetDto.class));
+        List<ActressGetDto> acctressGetDtos = mongoTemplate.find(query, ActressGetDto.class);
+        Page<ActressGetDto> page = PageableExecutionUtils.getPage(acctressGetDtos, pageable,
+                () -> mongoTemplate.count(Query.of(query).limit(-1).skip(-1), ActressGetDto.class));
         return page;
     }
 
     public void add(AcctressPostPutDto dto) {
-        Acctress acctress = new Acctress();
+        Actress acctress = new Actress();
         acctress.setName(dto.getName());
         acctress.setAvatar(dto.getAvatar());
         repo.save(acctress);
     }
 
     public void update(ObjectId id, AcctressPostPutDto dto) {
-        Acctress acctress = repo.findById(id).get();
+        Actress acctress = repo.findById(id).get();
         if (Objects.isNull(acctress)) return;
         acctress.setName(dto.getName());
         acctress.setAvatar(dto.getAvatar());

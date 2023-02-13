@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.repository.support.PageableExecutionUtils;
 import org.springframework.stereotype.Service;
-import vn.huuln.javaapi.document.Acctress;
+import vn.huuln.javaapi.document.Actress;
 import vn.huuln.javaapi.document.Mv;
 import vn.huuln.javaapi.document.Tag;
 import vn.huuln.javaapi.dto.*;
@@ -52,9 +52,9 @@ public class MvService {
         mv.setLinks(dto.getLinks());
 
         // acctresses
-        List<Acctress> acctresses = new ArrayList<>();
+        List<Actress> acctresses = new ArrayList<>();
         for (IdNameDto acctressDto : dto.getAcctresses()) {
-            Acctress acctress = new Acctress();
+            Actress acctress = new Actress();
             acctress.setId(acctressDto.getId());
             acctress.setName(acctressDto.getName());
             acctresses.add(acctress);
@@ -85,9 +85,9 @@ public class MvService {
         mv.setLinks(dto.getLinks());
 
         // acctresses
-        List<Acctress> acctresses = new ArrayList<>();
+        List<Actress> acctresses = new ArrayList<>();
         for (IdNameDto acctressDto : dto.getAcctresses()) {
-            Acctress acctress = new Acctress();
+            Actress acctress = new Actress();
             acctress.setId(acctressDto.getId());
             acctress.setName(acctressDto.getName());
             acctresses.add(acctress);

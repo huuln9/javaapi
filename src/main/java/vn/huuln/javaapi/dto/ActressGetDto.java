@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @Document(collection = "acctress")
-public class AcctressGetDto {
+public class ActressGetDto {
     @JsonSerialize(using = ToStringSerializer.class)
     private ObjectId id;
     private String name;
