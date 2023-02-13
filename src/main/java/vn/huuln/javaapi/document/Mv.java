@@ -17,6 +17,8 @@ public class Mv {
     @Id
     private ObjectId id;
     private String code;
+    private String thumbnail;
+    private List<String> images;
     private List<String> links;
     private List<Acctress> acctresses;
     private List<Tag> tags;
